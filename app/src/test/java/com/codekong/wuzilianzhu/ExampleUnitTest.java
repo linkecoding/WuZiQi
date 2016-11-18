@@ -1,4 +1,4 @@
-package com.codekong.wuziqi;
+package com.codekong.wuzilianzhu;
 
 import org.junit.Test;
 

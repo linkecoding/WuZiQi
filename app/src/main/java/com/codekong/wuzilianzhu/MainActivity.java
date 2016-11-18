@@ -1,9 +1,9 @@
-package com.codekong.wuziqi.activity;
+package com.codekong.wuzilianzhu;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 
-import com.codekong.wuziqi.R;
+import com.codekong.wuzilianzhu.R;
 import com.codekong.wuziqi.view.WuziqiPanel;
 
 public class MainActivity extends AppCompatActivity {

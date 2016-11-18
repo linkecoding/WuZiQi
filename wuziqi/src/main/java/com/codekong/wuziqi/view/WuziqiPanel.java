@@ -9,6 +9,7 @@ import android.graphics.Point;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -48,7 +49,7 @@ public class WuziqiPanel extends View{
     private boolean isGameOver;
     //确定赢家
     private boolean isWhiteWinner = false;
-
+    //游戏结束监听
     private OnGameOverListener onGameOverListener;
 
     public WuziqiPanel(Context context) {
@@ -106,6 +107,7 @@ public class WuziqiPanel extends View{
         }else if (heightMode == MeasureSpec.UNSPECIFIED){
             width = widthSize;
         }
+        Log.d("pyh", "onMeasure: width" + width + "height" + heightSize);
         //调用此方法使我们的测量结果生效
         setMeasuredDimension(width, width);
     }
@@ -120,6 +122,9 @@ public class WuziqiPanel extends View{
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
+        Log.d("pyh", "onSizeChanged: w" + w + "h" + h);
+
+        //此处的参数w就是在onMeasure()方法中设置的自定义View的大小
         //计算出棋盘宽度和行高
         mPanelWidth = w;
         mLineHeight = mPanelWidth * 1.0f / MAX_LINE_NUM;
@@ -179,7 +184,7 @@ public class WuziqiPanel extends View{
         //绘制黑棋子
         for (int i = 0, n = mBlackArray.size(); i < n; i++) {
             Point blackPoint = mBlackArray.get(i);
-            //棋子之间的间隔为1/8行高
+            //棋子之间的间隔为1/4行高
             canvas.drawBitmap(mBlackPiece,
                     (blackPoint.x + (1 - pieceScaleRatio) / 2) * mLineHeight,
                     (blackPoint.y + (1 - pieceScaleRatio) / 2) * mLineHeight, null);
@@ -196,11 +201,13 @@ public class WuziqiPanel extends View{
         if (isGameOver) return false;
 
         int action = event.getAction();
+        //手指抬起后处理
         if (action == MotionEvent.ACTION_UP){
 
-            //拦截按下事件自己来处理
+            //拦截事件自己来处理
             int x = (int) event.getX();
             int y = (int) event.getY();
+            Log.d("pyh1", "onTouchEvent: fx" + event.getX() + "fy" + event.getY() + "ix" + x + "iy" + y);
             Point point = getValidPoint(x, y);
             if (mWhiteArray.contains(point) || mBlackArray.contains(point)){
                 return false;
@@ -224,6 +231,7 @@ public class WuziqiPanel extends View{
      * @return
      */
     private Point getValidPoint(int x, int y) {
+        Log.d("pyh1", "getValidPoint: lx" + (int) (x / mLineHeight) + "ly" + (int) (y / mLineHeight));
         return new Point((int) (x / mLineHeight), (int) (y / mLineHeight));
     }
 
