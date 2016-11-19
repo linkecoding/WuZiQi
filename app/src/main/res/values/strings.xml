@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">WuZiQi</string>
+    <string name="app_name">五子连珠</string>
+    <string name="str_start_game">开始游戏</string>
+    <string name="str_white_piece">白棋</string>
+    <string name="str_black_piece">黑棋</string>
+    <string name="str_first_piece">先方</string>
+    <string name="str_white_piece_victory">白棋胜利</string>
+    <string name="str_black_piece_victory">黑棋胜利</string>
+    <string name="str_game_over">游戏结束</string>
+    <string name="str_restart_game">再来一局</string>
 </resources>

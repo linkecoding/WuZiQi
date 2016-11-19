@@ -309,4 +309,11 @@ public class WuziqiPanel extends View{
     public interface OnGameOverListener{
        void gameOver(boolean isWhiterWinner);
     }
+
+    /**
+     * 设置谁先下棋
+     */
+    public void setFirstPiece(boolean isWhiteFirst){
+        this.isWhiteFirst = isWhiteFirst;
+    }
 }
