@@ -49,9 +49,9 @@ public class WuZiQiActivity extends BaseActivity implements WuziqiPanel.OnGameOv
     @Override
     public void gameOver(boolean isWhiterWinner) {
         if (isWhiterWinner){
-            Utils.shouGameOverDialog(this, wuziqiPanel, R.string.str_white_piece_victory);
+            Utils.showGameOverDialog(this, wuziqiPanel, R.string.str_white_piece_victory);
         }else {
-            Utils.shouGameOverDialog(this, wuziqiPanel, R.string.str_black_piece_victory);
+            Utils.showGameOverDialog(this, wuziqiPanel, R.string.str_black_piece_victory);
         }
     }
 

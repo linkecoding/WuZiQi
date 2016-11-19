@@ -8,4 +8,8 @@
     <string name="str_black_piece_victory">黑棋胜利</string>
     <string name="str_game_over">游戏结束</string>
     <string name="str_restart_game">再来一局</string>
+    <string name="str_share_text">五子连珠这个小游戏不错呦,推荐给你们</string>
+    <string name="str_game_rule">游戏规则</string>
+    <string name="str_share_game">分享游戏</string>
+    <string name="str_game_rule_text">这是一款简单益智的五子棋小游戏,游戏的规则非常简单,游戏双方各持黑白棋子的一种,只需要努力使自己的棋子在棋盘上横着或者竖着或者斜对角线有五个同色棋子连成一条线,就会取得游戏的胜利。\r\n赶快开始游戏吧</string>
 </resources>

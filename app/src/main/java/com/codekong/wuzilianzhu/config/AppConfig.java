@@ -5,7 +5,16 @@ package com.codekong.wuzilianzhu.config;
  */
 
 public class AppConfig {
-    public static final String APP_ID = "2882303761517526649";
-    public static final String APP_KEY = "5381752692649";
+    //小米统计配置信息
+    public static final String MI_APP_ID = "2882303761517526649";
+    public static final String MI_APP_KEY = "5381752692649";
+
+    //社会化分享key
+    public static final String SHARE_APP_KEY = "192c9976ab2f5";
+
+    //APP渠道信息
     public static final String APP_CHANNEL = "xiaomi_store";
+
+    //APP下载链接
+    public static final String APP_DOWNLOAD_URL = "xiaomi_store";
 }

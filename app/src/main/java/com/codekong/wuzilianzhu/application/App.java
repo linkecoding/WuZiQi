@@ -19,7 +19,7 @@ public class App extends Application {
         super.onCreate();
 
         Log.d("mitong", "onCreate: " + MiStatInterface.getDeviceID(this));
-        MiStatInterface.initialize(this.getApplicationContext(), AppConfig.APP_ID, AppConfig.APP_KEY, AppConfig.APP_CHANNEL);
+        MiStatInterface.initialize(this.getApplicationContext(), AppConfig.MI_APP_ID, AppConfig.MI_APP_KEY, AppConfig.APP_CHANNEL);
 
         MiStatInterface.setUploadPolicy(
                 MiStatInterface.UPLOAD_POLICY_WHILE_INITIALIZE, 0);
